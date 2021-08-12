@@ -18,6 +18,8 @@
 /* Roboto 400/500/700/900 головний шрифт */
 /* Raleway 700 додатковий шрифт */
 
+
+
 body {
   background-color: var(--primary-bgc);
   color: var(--primary-text-color);
@@ -48,6 +50,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 
 .link {
   text-decoration: none;
@@ -264,6 +267,7 @@ img {
 .mail{
 padding: 15px 295px 15px 16px;
 background-color: var(--footer-bcg);
+color:rgba(255, 255, 255, 0.6);
 width: 358px;
 height: 50px;
 border: 1px solid #AFB1B8;
@@ -274,6 +278,11 @@ Line height: 1.25;
 Align: Left;
 Vertical align: Center;
 Letter spacing: 0.03em;
+resize:none;
+}
+
+.mail::placeholder{
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .slogan,
@@ -288,23 +297,32 @@ Letter spacing: 0.03em;
 }
 
 .service-sign{
-  display: inline-flex;
-  padding: 10px 29px 10px 29px;
-  margin-left: 12px;
-  margin-right: 0;
-  color: var(--text-white);
-  background: var(--accent-color);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  border: transparent;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+display: inline-flex;
+padding: 10px 29px 10px 29px;
+margin-left: 12px;
+margin-right: 0;
+color: var(--text-white);
+background: var(--accent-color);
+font-family: inherit;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.87;
+letter-spacing: 0.06em;
+border-radius: 4px;
+border: transparent;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.service-sign:hover,
+.service-sign:focus {
+background: #188ce8;
+}
+
+
+
 .icon-send{
   margin-left: 10px;
   margin-right: 0;
@@ -471,6 +489,163 @@ text-align: center;
   height: 18px;
   fill:#000000;
 }
+
+.form-field{ 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+padding-right: 40px;
+}
+
+.modal-form-title{
+  display: inline-block;
+margin-bottom:12px;
+padding-top: 40px;
+padding-left: 40px;
+padding-right: 40px;  
+Font style: 700;
+Font size: 20px;
+Line height: 1.15;
+Align: Center;
+Vertical align: Top;
+Letter spacing: 0.03em;
+color:var(--title-color);
+}
+
+.form-lable{ 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  
+}
+.form-icon-box{
+display: flex;
+position: absolute;
+top: 31px;
+left: 52px;
+justify-content: center;
+align-items: center;
+width: 18px;
+height: 18px;
+margin-right: 12px;
+}
+
+.icon-man{  
+  width: 12px;
+  height: 12px;
+  fill:#000000;
+}
+.icon-phone2{
+  width: 13px;
+  height: 13px;
+  fill:#000000;
+}
+.icon-envelope2{
+  width: 15px;
+  height: 12px;
+  fill:#000000;
+}
+
+.form-input{
+display: inline-block;
+padding: 12px 12px 12px 42px;
+margin-top: 4px;
+width: 448px;
+height: 40px;
+border: 1px solid #AFB1B8;
+border-radius: 4px;
+Font size: 16px;
+Line height: 1.16;
+Letter spacing: 0.01em;
+}
+
+.comment{
+padding:12px 16px;
+border: 1px solid #AFB1B8;
+border-radius: 4px;
+width: 100%;
+height: 120px;
+Font size: 12px;
+Line height: 1.16;
+Letter spacing: 0.01em;
+resize:none;
+}
+
+
+
+.form-comment{
+  margin-bottom:4px;
+}
+
+.agree{
+display: flex;
+justify-content: center;
+align-items: center;
+Font style: Regular
+Font size: 14px;
+Line height: 1.71;
+Letter spacing: 0.03em;
+color:var(--primary-text-color);
+}
+
+.checkbox-field{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.checkbox{
+  position: absolute
+  -webkit-appearance:none;
+}
+
+.checkbox-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  
+}
+
+
+.icon-check{
+  width: 16px; ;
+  height: 15px;
+  background-color: var(--accent-color); 
+  fill:var(--text-white);
+  margin-right: 7px;
+}
+
+.agree-link{
+  display: inline-block;
+  color: var(--accent-color);
+}
+.service-modal{
+  display: block;
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  color: var(--text-white);
+  background: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+
 
 /* Якості  */
 
@@ -862,4 +1037,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+::placeholder{
+  color: rgba(33, 33, 33, 0.2);
 }
